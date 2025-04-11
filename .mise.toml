@@ -10,4 +10,4 @@ run = "pre-commit run -a"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
-    
+
