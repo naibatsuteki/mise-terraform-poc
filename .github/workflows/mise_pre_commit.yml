@@ -1,0 +1,28 @@
+name: 'MisePreCommitCodeQuality'
+
+on:
+  workflow_call:
+
+jobs:
+  mise-pre-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - uses: actions/checkout@v4
+
+    # Install mise
+    - name: Install mise
+      run: |
+        curl https://mise.run | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+    # Install tools using mise
+    - name: Install tools with mise
+      run: |
+        mise install
+
+    # TODO: Add caching for mise install and pre-commit to speed up the workflow
+    # Run pre-commit with mise
+    - name: pre-commit
+      run: |
+        mise run pre-commit

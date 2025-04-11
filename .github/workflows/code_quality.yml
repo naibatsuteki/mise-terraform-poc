@@ -1,0 +1,5 @@
+name: 'CodeQualityAndChecks'
+on: push
+jobs:
+  code_quality:
+    uses: ./.github/workflows/mise_pre_commit.yml

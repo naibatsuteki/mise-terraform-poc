@@ -1,0 +1,24 @@
+######################
+# Common
+######################
+
+.venv/*
+
+######################
+# Terraform
+######################
+
+.terraform/
+.terraform.*
+*.tfstate.*
+*.tfstate
+*.tfvars
+
+
+*/**/.terragrunt-cache
+
+### Custom
+
+**/debug/**/*
+*.svg
+*.txt
