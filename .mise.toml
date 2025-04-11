@@ -2,7 +2,7 @@
 python = "prefix:3.12"
 pre-commit = "4.2.0"
 tflint = '0.56.0'
-terraform = 'prefix:1.8'
+terraform = 'prefix:1.10'
 terraform-docs = '0.20.0'
 
 [tasks.pre-commit]
@@ -10,3 +10,4 @@ run = "pre-commit run -a"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
+    
